@@ -1,31 +1,23 @@
 package XudongYu;
-
+import org.junit.Assert.*;
 import junit.framework.TestCase;
-import junit.framework.Assert;
-import org.junit.Test;
-
-public class test_triangle extends TestCase {
+import junit.framework.TestSuite;
+import junit.framework.Test;
+public class TriangleTest extends TestCase {
     protected  Triangile triangile;
-    protected double fvalue1;
-    protected double fvalue2;
     @Override
     protected void setUp(){
         triangile = new Triangile(3, 3, 3);
-        fvalue1 = 2.0;
-        fvalue2 = 3.0;
     }
 
     public void testIsEquilateral() {
-        double res = fvalue1 + fvalue2;
-        assertTrue(res == 5.0);
         assertTrue("It is a equilateral triangle",
                 triangile.getAge1() == triangile.getAge2() &&
                         triangile.getAge2() == triangile.getAge3());
     }
 
 
-    public  void testIsTriangle() {
-        Triangile first = new Triangile(1, 2, 2);
+    public void testIsTriangle() {
         int res1 = triangile.getAge1() + triangile.getAge2() - triangile.getAge3();
         int res2 = triangile.getAge2() + triangile.getAge3() - triangile.getAge1();
         int res3 = triangile.getAge3() + triangile.getAge1() - triangile.getAge2();
@@ -47,4 +39,5 @@ public class test_triangle extends TestCase {
                         triangile.getAge2() != triangile.getAge3() &&
                         triangile.getAge3() != triangile.getAge1());
     }
+
 }

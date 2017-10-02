@@ -1,17 +1,14 @@
 package XudongYu;
 
+import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestResult;
+import junit.framework.TestSuite;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        TestCase testCase = new test_triangle() {
-            public void runTest() {
-                new test_isEquilateral();
-            }
-        };
-        testCase.run();
+        // write your code here
+
     }
 }

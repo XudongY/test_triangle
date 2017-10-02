@@ -1,5 +1,7 @@
 package XudongYu;
 
+import junit.framework.TestCase;
+
 public class Triangile {
 
     private int age1;
