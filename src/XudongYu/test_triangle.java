@@ -15,7 +15,7 @@ public class test_triangle extends TestCase {
         fvalue2 = 3.0;
     }
 
-    public void isEquilateral() {
+    public void testIsEquilateral() {
         double res = fvalue1 + fvalue2;
         assertTrue(res == 5.0);
         assertTrue("It is a equilateral triangle",
@@ -24,7 +24,7 @@ public class test_triangle extends TestCase {
     }
 
 
-    public  void isTriangle() {
+    public  void testIsTriangle() {
         Triangile first = new Triangile(1, 2, 2);
         int res1 = triangile.getAge1() + triangile.getAge2() - triangile.getAge3();
         int res2 = triangile.getAge2() + triangile.getAge3() - triangile.getAge1();
@@ -33,7 +33,7 @@ public class test_triangle extends TestCase {
     }
 
 
-    public void isIsosceles() {
+    public void testIsIsosceles() {
         assertTrue("It is a Isosceles triangle",
                 triangile.getAge1() == triangile.getAge2() ||
                         triangile.getAge2() == triangile.getAge3() ||
@@ -41,13 +41,10 @@ public class test_triangle extends TestCase {
     }
 
 
-    public void isSclene() {
+    public void testIsSclene() {
         assertTrue("It is a isSclene triangle",
                 triangile.getAge1() != triangile.getAge2() &&
                         triangile.getAge2() != triangile.getAge3() &&
                         triangile.getAge3() != triangile.getAge1());
     }
-
-
-    TestCase test = new test_triangle();
 }
